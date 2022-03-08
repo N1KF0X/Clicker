@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity
         {
             counter = savedInstanceState.getInt("counter");
         }
-        counterView.setText(counter.toString());
-        Toast.makeText(this, "onCreate()", Toast.LENGTH_LONG).show();
+        counterView.setText(counter.toString());        
     }
 
     @Override
@@ -33,54 +32,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         counter = savedInstanceState.getInt("counter");
-        Log.d(TAG, "onRestoreInstanceState");
-    }
-
-    @Override
-    public void onRestart(){
-        super.onRestart();
-        Log.d(TAG, "onRestart");
-    }
-
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.d(TAG, "onStart");
-        resetUI();
-    }
-
-    @Override
-    public void onResume()
-    {
-        super.onResume();
-        Log.d(TAG, "onResume");
-    }
-
-    @Override
-    public void onPause()
-    {
-        super.onPause();
-        Log.d(TAG, "onPause");
-    }
-
-    @Override
-    public void onStop()
-    {
-        super.onStop();
-        Log.d(TAG, "onStop");
-    }
-
-    @Override
-    public void onDestroy()
-    {
-        super.onDestroy();
-        Log.d(TAG, "onDestroy");
-    }
-
-    private void resetUI()
-    {
-        ((TextView) findViewById(R.id.txt_counter)).setText(counter.toString());
-        Log.d(TAG, "resetUI");
     }
 
     @Override
@@ -88,7 +39,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onSaveInstanceState(outState);
         outState.putInt("counter", counter);
-        Log.d(TAG, "onSaveInstanceState");
     }
 
     public void onClickBtnAddStudents(View view)
