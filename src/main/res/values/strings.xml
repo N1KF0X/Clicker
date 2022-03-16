@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LongRoad</string>
+    <string name="txt_students">метров пройдено</string>
+    <string name="btn_students">Пройти метр</string>
+</resources>
